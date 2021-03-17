@@ -29,6 +29,7 @@ namespace P10_KondicinesSalygosSwitch
                     break;
                 default:
                     Console.WriteLine("Pasirinkimas neteisingas"); // vykdoma jei nei 1 is case nesuveiks
+                    break;
 
             }
 

@@ -97,13 +97,46 @@ namespace Testai
                 Console.WriteLine($"Vyriausias draugas : {draugas3} {draugas3Amzius} metu");
             }*/
 
-            DateTime kaledos =
-            Console.WriteLine("Iveskite 3 datas");
-            DateTime ivestaData1 = DateTime.Parse(Console.ReadLine());
-            DateTime ivestaData2 = DateTime.Parse(Console.ReadLine());
-            DateTime ivestaData3 = DateTime.Parse(Console.ReadLine());
+            /* Console.WriteLine("Iveskite 4 datas");
+             var ivestaData1 = DateTime.Parse(Console.ReadLine());
+             var ivestaData2 = DateTime.Parse(Console.ReadLine());
+             var ivestaData3 = DateTime.Parse(Console.ReadLine());
+             var ivestaData4 = DateTime.Parse(Console.ReadLine());
 
-            if (ivestaData1 || ivestaData2 || ivestaData3 = )
+             Console.WriteLine($"Ivesta {ivestaData1}, {ivestaData2}, {ivestaData3}, {ivestaData4}");
+
+             if (ivestaData1.Month == 12 && ivestaData1.Day == 24)
+             {
+                 Console.WriteLine("Jums priklauso nemokami kaledu sausainiai");
+             }
+             else if (ivestaData2.Month == 12 && ivestaData2.Day == 24)
+             {
+                 Console.WriteLine("Jums priklauso nemokami kaledu sausainiai");
+             }
+             else if (ivestaData3.Month == 12 && ivestaData3.Day == 24)
+             {
+                 Console.WriteLine("Jums priklauso nemokami kaledu sausainiai");
+             }
+             else if (ivestaData4.Month == 12 && ivestaData4.Day == 24)
+             {
+                 Console.WriteLine("Jums priklauso nemokami kaledu sausainiai");
+             }
+             else
+             {
+                 Console.WriteLine("Palaukite kaledu");
+             }*/
+
+
+            int[] masyvasInt = new int[5] { 5, 87, 42, 54, 12 };
+            Console.WriteLine($"Dvieju elementu suma: {masyvasInt[0] + masyvasInt[4]}");
+
+            string[] masyvasString = new string[4] {"Jonas", "Petras", "Antanas", "Juozas" };
+            Console.WriteLine(string.Join(" ", masyvasString) );
+
+            string vardas = "Vytas";
+            masyvasString[3] = vardas;
+
+            Console.WriteLine(string.Join(" ", masyvasString));
 
         }
     }
