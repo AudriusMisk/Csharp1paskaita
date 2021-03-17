@@ -16,7 +16,11 @@ namespace P14_Random
             Metodas(random);
             Console.WriteLine(bRandomNumber);*/
 
-            Kauliukas();
+            // Kauliukas();
+            Random random = new Random();
+            int[] grazintasMasyvas = RandomMetodas(random, 5, 20, 12);
+            Console.WriteLine("Gautas random masyvas:");
+            Console.WriteLine(String.Join(",", grazintasMasyvas));
 
         }
 
@@ -25,7 +29,7 @@ namespace P14_Random
             return rnd.Next(1, 10);      
         }*/
 
-        public static void Kauliukas()
+        /*public static void Kauliukas()
         {
             Random random = new Random();
             int kauliukoSkaicius = random.Next(1, 7);
@@ -56,6 +60,20 @@ namespace P14_Random
                     Console.WriteLine("Pasirinkimas neteisingas");
                     break;
             }
+        }*/
+
+        public static int[] RandomMetodas(Random randomObject, int lowerBound, int upperBound, int amountOfElements)
+        {
+            int[] kauliukuMasyvas = new int[amountOfElements];
+            for (int i = 0; i < amountOfElements; i++)
+            {
+                int randomSkaicius = randomObject.Next(lowerBound, upperBound);
+                kauliukuMasyvas[i] = randomSkaicius;
+
+            }
+            return kauliukuMasyvas;
+
+           
         }
     }
 }
