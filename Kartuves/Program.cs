@@ -51,6 +51,23 @@ namespace Kartuves
         {
             string[] zaidziamasMasyvas = TemosPasirinkimas();
             Console.WriteLine(String.Join(",", zaidziamasMasyvas));
+            Random random = new Random();
+            int randomZodioId = random.Next(10);
+            Console.WriteLine($"Pasirinktas zodis yra {zaidziamasMasyvas[randomZodioId]}"); // veliau parasyti tikrinima ar sitas zodis jau buvo naudotas
+            Piesinys();
+        }
+
+        static void Piesinys()
+        {
+            Console.WriteLine(@" ------|");
+            Console.WriteLine(@"|      o");
+            Console.WriteLine(@"|     \|/ ");
+            Console.WriteLine(@"|      0");
+            Console.WriteLine(@"|     / \");
+            Console.WriteLine(@"|   ");
+            Console.WriteLine(@"|   ");
+            Console.WriteLine(@"|   ");
+            Console.WriteLine(@"----   ");
         }
 
     }
