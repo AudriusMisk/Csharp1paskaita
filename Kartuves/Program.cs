@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace Kartuves
@@ -54,7 +55,7 @@ namespace Kartuves
             Console.WriteLine(String.Join(",", zaidziamasMasyvas));
 
             Random random = new Random();
-            int randomZodioId = random.Next(10);
+            int randomZodioId = random.Next(zaidziamasMasyvas.Length);
 
             Console.WriteLine($"Pasirinktas zodis yra {zaidziamasMasyvas[randomZodioId]}"); // veliau parasyti tikrinima ar sitas zodis jau buvo naudotas
             char[] zaidziamoZodzioCharMasyvas = zaidziamasMasyvas[randomZodioId].ToCharArray();
@@ -62,10 +63,11 @@ namespace Kartuves
 
             Console.WriteLine("Irasykite spejama raide"); // reikes padaryti kad galima butu irasyti ir pilna zodi
             char spetaRaide = Console.ReadKey().KeyChar;
-            if (zaidziamoZodzioCharMasyvas.Contains(spetaRaide))
+            List <char> raidziuListas = zaidziamoZodzioCharMasyvas.ToList();
+            if (raidziuListas.Contains(spetaRaide))
             {
-                Console.WriteLine("atspejote raide");
 
+                Console.WriteLine(String.Join(",", raidziuListas));
             }
 
             Piesinys();
