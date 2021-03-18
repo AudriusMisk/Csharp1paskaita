@@ -11,9 +11,16 @@ namespace Kartuves
 
         static string[] TemosPasirinkimas()
         {
-            Console.WriteLine("Iveskite kurios temos zodzius norite spelioti");
+            Console.WriteLine("Temos:");
             Console.WriteLine(" 1 - Vardai \n 2 - Lietuvos miestai \n 3 - Valstybes \n 4 - Vaisiai");
-            int temosSkaicius = int.Parse(Console.ReadLine());
+            int temosSkaicius = 0;
+            // cia naudoti tryparse
+            while (temosSkaicius < 1 || temosSkaicius > 4)
+            {
+                Console.WriteLine("iveskite temos numeri nuo 1 iki 4");
+                var ivestasNumeris = Console.ReadLine();
+                temosSkaicius = Convert.ToInt32(ivestasNumeris);
+            }
             switch (temosSkaicius)
             {
                 case 1:
@@ -33,10 +40,7 @@ namespace Kartuves
                     string[] vaisiuMasyvas = { "Obuolys", "Bananas", "Mangas", "Apelsinas", "Mandarinas", "Kriause", "Kivis", "Arbuzas", "Ananasas", "Greipfrutas" };
                     return vaisiuMasyvas;
                 default:
-                    Console.WriteLine("Pasirinkimas neteisingas");
-                    TemosPasirinkimas();
-                    string[] tusciasMasyvas = {"xxxx"};
-                    return tusciasMasyvas;
+                    return null;
 
 
 
